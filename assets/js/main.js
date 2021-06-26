@@ -71,10 +71,40 @@ tabs.forEach(tab=> {
     })
 })
 /*==================== SERVICES MODAL ====================*/
+const modelViews = document.querySelectorAll('.services__model') 
+const modelBtns = document.querySelectorAll('.services__button')
+const modelCloses = document.querySelectorAll('.services__model-close') 
 
+let model = function(modelClick){
+    modelViews[modelClick].classList.add('active-model')
+}
 
+modelBtns.forEach((modelBtn, i) => {
+    modelBtn.addEventListener('click', ()=> {
+        model(i)
+    })
+})
+
+modelCloses.forEach((modelClose) =>{
+    modelClose.addEventListener('click', () => {
+        modelViews.forEach((modelView) =>{
+            modelView.classList.remove('active-model')
+        })
+    })
+})
 /*==================== PORTFOLIO SWIPER  ====================*/
-
+let swiper = new Swiper(".portfolio__container", {
+    cssMode: true,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 
 /*==================== TESTIMONIAL ====================*/
 
