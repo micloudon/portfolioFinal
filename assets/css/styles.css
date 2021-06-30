@@ -133,6 +133,13 @@ a{
     text-decoration: none;
 }
 
+button{
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 img{
     max-width: 100%;
     height: auto;
@@ -289,7 +296,7 @@ img{
 }
 
 .home__social-icon{
-    font-size: 1.25rem;
+    font-size: 2.5rem;
     color: var(--first-color);
 }
 
@@ -772,6 +779,7 @@ img{
     padding: 0 1.5rem;
 }
 
+
 .portfolio__img{
     width: 265px;
     border-radius: .5rem;
@@ -965,7 +973,7 @@ img{
     row-gap: 1.5rem;
 }
 
-.footer__links:hover{
+.footer__link:hover{
     color: var(--first-color-lighter);
 }
 
@@ -990,6 +998,24 @@ img{
 .footer__link,
 .footer__social{
     color: #FFF;
+}
+
+/* Thank you */
+.thank__you{
+    padding: 2rem;
+    background-color: var(--first-color);
+    color: #FFF;
+}
+
+.thank__link {
+    border: solid 1px #FFF;
+    padding: .66rem;
+    color: #fff;
+}
+
+.thank__link:hover {
+    font-weight: bold;
+    border: solid 2.3px #FFF;
 }
 
 /*========== SCROLL UP ==========*/
@@ -1300,6 +1326,11 @@ img{
     .portfolio__content{
         column-gap: 5rem;
     }
+    
+    .portfolio__img{
+        width: 700px;
+        height: 460px;
+    }
 
     .swiper-portfolio-icon{
         font-size: 3.5rem;
@@ -1321,4 +1352,11 @@ img{
         grid-template-columns: repeat(2, 1fr);
     }
 
+
+    @media screen and (min-width: 1366px){
+
+        html, header{
+            border-left: solid 150px var(--first-color);
+        }
+    }
 }
